@@ -1,6 +1,26 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Sys            whichResis    public void Next()
+    {
+        index += 1;
+        for (int i = 0; i < resistors.Length; i++)
+        {
+            resistors[i].gameObject.SetActive(false);
+            resistors[index].gameObject.SetActive(true);
+            whichResist.text = "Resistencia : " + resistors[index].gameObject.GetComponent<ResistorOhm>()._resistorOhm.ToString() + "R";
+        }
+
+    }e    public void Previous()
+    {
+        index -= 1;
+        for (int i = 0; i < resistors.Length; i++)
+        {
+            resistors[i].gameObject.SetActive(false);
+            resistors[index].gameObject.SetActive(true);
+            whichResist.text = "Resistencia : " + resistors[index].gameObject.GetComponent<ResistorOhm>()._resistorOhm.ToString() + "R";
+        }
+
+    } " + resistors[0].gameObject.GetComponent<ResistorOhm>()._resistorOhm.ToString() + "R";em.Collections.Generic;
+usin            whichResist.text = "Resistencia : " + resistors[index].            whichResist.text = "Resistencia : " + resistors[index].gameObject.GetComponent<ResistorOhm>()._resistorOhm.ToString() + "R";ameObject.GetComponent<ResistorOhm>()._resistorOhm.ToString() + "R"; UnityEngine;
 using UnityEngine.UI;
 public class SwitchNextAndPrev : MonoBehaviour
 {
@@ -33,7 +53,7 @@ public class SwitchNextAndPrev : MonoBehaviour
         if (index == 0)
         {
             resistors[0].gameObject.SetActive(true);
-            whichResist.text = "Direnç : " + resistors[0].gameObject.GetComponent<ResistorOhm>()._resistorOhm.ToString() + "R";
+            whichResist.text = "Direnï¿½ : " + resistors[0].gameObject.GetComponent<ResistorOhm>()._resistorOhm.ToString() + "R";
         }
 
 
@@ -50,7 +70,7 @@ public class SwitchNextAndPrev : MonoBehaviour
         if (batteryIndex == 0)
         {
             batteries[0].gameObject.SetActive(true);
-            whichBattery.text = "Voltaj : " + batteries[0].gameObject.GetComponent<BatteryVolt>()._batteryVolt.ToString() + "V";
+            whichBattery.text = "Voltaje : " + batteries[0].gameObject.GetComponent<BatteryVolt>()._batteryVolt.ToString() + "V";
         }
 
     }
@@ -62,7 +82,7 @@ public class SwitchNextAndPrev : MonoBehaviour
         {
             resistors[i].gameObject.SetActive(false);
             resistors[index].gameObject.SetActive(true);
-            whichResist.text = "Direnç : " + resistors[index].gameObject.GetComponent<ResistorOhm>()._resistorOhm.ToString() + "R";
+            whichResist.text = "Direnï¿½ : " + resistors[index].gameObject.GetComponent<ResistorOhm>()._resistorOhm.ToString() + "R";
         }
 
     }
@@ -74,7 +94,7 @@ public class SwitchNextAndPrev : MonoBehaviour
         {
             resistors[i].gameObject.SetActive(false);
             resistors[index].gameObject.SetActive(true);
-            whichResist.text = "Direnç : " + resistors[index].gameObject.GetComponent<ResistorOhm>()._resistorOhm.ToString() + "R";
+            whichResist.text = "Direnï¿½ : " + resistors[index].gameObject.GetComponent<ResistorOhm>()._resistorOhm.ToString() + "R";
         }
 
     }
@@ -88,7 +108,7 @@ public class SwitchNextAndPrev : MonoBehaviour
         {
             batteries[i].gameObject.SetActive(false);
             batteries[batteryIndex].gameObject.SetActive(true);
-            whichBattery.text = "Voltaj : " + batteries[batteryIndex].gameObject.GetComponent<BatteryVolt>()._batteryVolt.ToString() + "V";
+            whichBattery.text = "Voltaje : " + batteries[batteryIndex].gameObject.GetComponent<BatteryVolt>()._batteryVolt.ToString() + "V";
         }
 
     }
@@ -100,7 +120,7 @@ public class SwitchNextAndPrev : MonoBehaviour
         {
             batteries[i].gameObject.SetActive(false);
             batteries[batteryIndex].gameObject.SetActive(true);
-            whichBattery.text = "Voltaj : " + batteries[batteryIndex].gameObject.GetComponent<BatteryVolt>()._batteryVolt.ToString() + "V";
+            whichBattery.text = "Voltaje : " + batteries[batteryIndex].gameObject.GetComponent<BatteryVolt>()._batteryVolt.ToString() + "V";
         }
 
     }

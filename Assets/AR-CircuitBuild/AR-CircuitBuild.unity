@@ -2353,7 +2353,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Change Battery
+  m_Text: Cambiar Batería
 --- !u!222 &305318128
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2910,7 +2910,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Change Resistor
+  m_Text: Cambiar Resistencia
 --- !u!222 &383085416
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6221,7 +6221,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: OPTION
+  m_Text: OPCIÓN
 --- !u!222 &882369823
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9254,7 +9254,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Return
+  m_Text: Volver
 --- !u!222 &1448601267
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11555,7 +11555,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Multimeter Prob
+  m_Text: Sonda Multímetro
 --- !u!222 &1867575550
 CanvasRenderer:
   m_ObjectHideFlags: 0

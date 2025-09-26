@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class SimulationManager : MonoBehaviour
 {
-    //switch ve bulb emissionu için---------------------------------
+    //switch ve bulb emissionu iï¿½in---------------------------------
     public GameObject bulbParentGameObj;
     public Renderer switchKeyObjRenderer;
     public Material[] switchOnOffMaterials;
     public AudioSource crushingFX;
     //----------------------------------------------------------------
-    //switch btn için-------------------------------------------------
+    //switch btn iï¿½in-------------------------------------------------
     private string switchBtnName = "switch key";
     private Transform state;
     private int switchBtncount;
     //----------------------------------------------------------------
-    //Dugum Noklarýndaki count deðerlerini çekicez
+    //Dugum Noklarï¿½ndaki count deï¿½erlerini ï¿½ekicez
     BatteryNegativePoint batteryNegative;
     BatteryPozitivePoint batteryPozitive;
     BulbLeftPoint bulbLeft;
@@ -28,10 +28,10 @@ public class SimulationManager : MonoBehaviour
     WireLeftPoint wireLeft;
     WireRightPoint wireRight;
     //--------------------------------------------------
-    //Buttery ve Resistor Deðerleri için 
+    //Buttery ve Resistor Deï¿½erleri iï¿½in 
     BatteryVolt batteryVolt;
     ResistorOhm resistorOhm;
-    //Etkileþim varsa Triggerlar oluþcak
+    //Etkileï¿½im varsa Triggerlar oluï¿½cak
     private bool batteryTrig;
     private bool bulbTrig;
     private bool reactorTrig;
@@ -69,7 +69,7 @@ public class SimulationManager : MonoBehaviour
     void Start()
     {
         switchOnOffMaterials[0] = switchKeyObjRenderer.GetComponent<Renderer>().material;
-        //dugum noktalarý-----------------------
+        //dugum noktalarï¿½-----------------------
         batteryNegative = FindObjectOfType<BatteryNegativePoint>();
         batteryPozitive = FindObjectOfType<BatteryPozitivePoint>();
         bulbLeft = FindObjectOfType<BulbLeftPoint>();
@@ -135,7 +135,7 @@ public class SimulationManager : MonoBehaviour
         }
         //-------------------------------
 
-        //Simulasyon için oluþacak durumlar-----------------
+        //Simulasyon iï¿½in oluï¿½acak durumlar-----------------
         if (batteryTrig && wireTrig && bulbTrig && reactorTrig)
         {
             voltText.text = "U = " + batteryVolt._batteryVolt.ToString() + " Volt";
@@ -253,7 +253,7 @@ public class SimulationManager : MonoBehaviour
         else if (bulbTrig && wireTrig && reactorTrig && switchTrig)
         {
             voltText.fontSize = 15;
-            voltText.text = "Please connect a power supply to your circuit!";
+            voltText.text = "Â¡Por favor conecta una fuente de energÃ­a a tu circuito!";
             bulbParentGameObj.transform.GetChild(3).gameObject.SetActive(true);
             bulbParentGameObj.transform.GetChild(4).gameObject.SetActive(false);
             switchKeyObjRenderer.material = switchOnOffMaterials[0];
@@ -264,7 +264,7 @@ public class SimulationManager : MonoBehaviour
             {
                 voltText.text = "U = " + batteryVolt._batteryVolt.ToString() + " Volt";
                 resistText.fontSize = 15;
-                resistText.text = "Warning !! Connect a resistor to the circuit. Circuit elements will be damaged.";
+                resistText.text = "Â¡Â¡Advertencia!! Conecta una resistencia al circuito. Los elementos del circuito se daÃ±arÃ¡n.";
                 amperText.text = "I = " + batteryVolt._batteryVolt.ToString() + " Amper";
                 bulbParentGameObj.transform.GetChild(3).gameObject.SetActive(false);
                 bulbParentGameObj.transform.GetChild(4).gameObject.SetActive(true);
@@ -275,7 +275,7 @@ public class SimulationManager : MonoBehaviour
                     bulbParentGameObj.transform.GetChild(4).gameObject.SetActive(false);
                     switchKeyObjRenderer.material = switchOnOffMaterials[0];
                     voltText.text = "";
-                    resistText.text = "SWITCH AND BULB GOT DAMAGED BY HIGH VOLTAGE";
+                    resistText.text = "EL INTERRUPTOR Y LA BOMBILLA SE DAÃ‘ARON POR ALTO VOLTAJE";
                     amperText.text = "";
                 }
             }
